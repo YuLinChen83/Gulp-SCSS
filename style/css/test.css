@@ -1,0 +1,28 @@
+@charset "UTF-8";
+.tt {
+  color: #f00; }
+
+div {
+  color: #008;
+  border: 1px solid #f00; }
+  div span {
+    color: #c00; }
+
+#qq, .aa {
+  margin: 20px; }
+
+.aa {
+  color: #0ff; }
+  @media screen and (orientation: landscape) {
+    .aa {
+      color: yellow; } }
+
+a {
+  color: #0f0; }
+  @media screen and (orientation: landscape) {
+    a {
+      color: yellow; } }
+  a:hover {
+    color: #050; }
+
+/*test多行註解將會保留*/

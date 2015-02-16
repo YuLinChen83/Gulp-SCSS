@@ -1,0 +1,34 @@
+@import "tt1";
+@mixin bb($p,$s,$c){
+	border:$p $s $c;
+}
+$b : #008;
+div{
+	color:$b;
+	@include bb(1px,solid,#f00);
+	span{
+		color:#c00;
+	}
+}
+#qq{
+	margin:20px;
+}
+.aa{
+	@extend #qq;
+	color:#0ff;
+	@media screen and (orientation: landscape){
+		color:yellow;
+	}
+}
+
+a{
+	color:#0f0;
+	@media screen and (orientation: landscape){
+		color:yellow;
+	}
+	&:hover{
+		color:#050;
+	}
+}
+//test單行註解將會消失
+/*test多行註解將會保留*/
