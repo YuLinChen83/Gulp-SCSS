@@ -1,16 +1,18 @@
 var gulp = require('gulp'),
-	sass   = require('gulp-sass');
+	compass   = require('gulp-compass');
 
-gulp.task('sass',function(){
+gulp.task('compass',function(){
 	return gulp.src('./style/scss/*.scss')
-		.pipe(sass({
-			errLogToConsole: true
+		.pipe(compass({
+      css: './style/css/',
+      sass: './style/scss/',
+      style: 'compact' //nested, expanded, compact, compressed
 		}))
 		.pipe(gulp.dest('./style/css/'));
 }); 
 
 gulp.task('watch',function(){
-	gulp.watch('./style//scss/*.scss',['sass']);
+	gulp.watch('./style//scss/*.scss',['compass']);
 });
 
-gulp.task('default',['sass','watch']);
+gulp.task('default',['compass','watch']);

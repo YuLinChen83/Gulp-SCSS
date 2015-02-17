@@ -1,28 +1,41 @@
 @charset "UTF-8";
-.tt {
-  color: #f00; }
+/* test 多行註解將會保留 */
+.tt { color: #f00; }
 
-div {
-  color: #008;
-  border: 1px solid #f00; }
-  div span {
-    color: #c00; }
+div { color: #008; border: 1px solid #f00; }
+div span { color: #c00; }
 
-#qq, .aa {
-  margin: 20px; }
+#qq, .aa { margin: 20px; }
 
-.aa {
-  color: #0ff; }
-  @media screen and (orientation: landscape) {
-    .aa {
-      color: yellow; } }
+.aa { color: #0ff; }
 
-a {
-  color: #0f0; }
-  @media screen and (orientation: landscape) {
-    a {
-      color: yellow; } }
-  a:hover {
-    color: #050; }
+a { color: #0f0; }
+a:hover { color: #050; }
 
-/*test多行註解將會保留*/
+/* for 迴圈的使用 */
+.item-1 { width: 1px; }
+
+.item-2 { width: 2px; }
+
+.item-3 { width: 3px; }
+
+/* each 的使用 */
+.red-icon { background-color: red; }
+
+.blue-icon { background-color: blue; }
+
+.green-icon { background-color: green; }
+
+.yellow-icon { background-color: yellow; }
+
+/* while 的使用 */
+.item-4 { width: 8px; }
+
+.item-3 { width: 6px; }
+
+.item-2 { width: 4px; }
+
+.item-1 { width: 2px; }
+
+/* 陣列變數，後面的...非常重要一定要加 */
+.p { color: #f00; background-color: #0f0; border-color: #00f; }

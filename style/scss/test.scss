@@ -1,34 +1,67 @@
-@import "tt1";
-@mixin bb($p,$s,$c){
-	border:$p $s $c;
+// test 單行註解將會消失
+/* test 多行註解將會保留 */
+
+@import "t1";
+
+// 變數的使用
+$b: #008;
+
+//函式的使用
+@mixin bb($p, $s, $c) {
+  border: $p $s $c;
 }
-$b : #008;
-div{
-	color:$b;
-	@include bb(1px,solid,#f00);
-	span{
-		color:#c00;
-	}
+
+div {
+  color: $b;
+  @include bb(1px, solid, #f00);
+  span {
+    color: #c00;
+  }
 }
-#qq{
-	margin:20px;
+#qq {
+  margin: 20px;
 }
-.aa{
-	@extend #qq;
-	color:#0ff;
-	@media screen and (orientation: landscape){
-		color:yellow;
+.aa {
+  @extend #qq;
+  color: #0ff;
+}
+a {
+  color: #0f0;
+  &:hover {
+    color: #050;
+  }
+}
+
+/* for 迴圈的使用 */
+@for $i from 1 through 3{
+	.item-#{$i}{
+		width:$i +px;
 	}
 }
 
-a{
-	color:#0f0;
-	@media screen and (orientation: landscape){
-		color:yellow;
-	}
-	&:hover{
-		color:#050;
-	}
+/* each 的使用 */
+@each $color in red, blue, green, yellow {
+  .#{$color}-icon {
+    background-color: $color;
+  }
 }
-//test單行註解將會消失
-/*test多行註解將會保留*/
+ 
+/* while 的使用 */
+$q: 4;
+@while $q > 0 {
+  .item-#{$q} { width: 2px * $q; }
+  $q: $q - 1;
+}
+
+/* 陣列變數，後面的...非常重要一定要加 */
+$vs: #f00, #0f0, #00f;
+@mixin colors($a1, $a2, $a3){
+	color:$a1;
+	background-color:$a2;
+	border-color:$a3;
+}
+.p{
+	@include colors($vs...);
+}
+
+
