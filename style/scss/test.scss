@@ -71,4 +71,53 @@ $vs: #f00, #0f0, #00f;
 	@include colors($vs...);
 }
 
+/* 使用 list nth 的方式定義 */
+$colourList: (
+    1:(#000,#111),
+    2:(#00f,#00a),
+    3:(#0f0,#0a0),
+    4:(#f00,#a00)
+);
+
+@each $colourList, $keyNumber in $colourList {
+    $background: nth($keyNumber, 1);
+    $lowlight: nth($keyNumber, 2);
+    header {
+        .section-#{$colourList}{
+            background-color: $background;
+            border-right: 2px dotted $lowlight;
+        }
+    }
+}
+
+
+/* 使用 map 的方式定義 */
+$map: ( 
+  mm:(
+    map-color:#f00,
+    map-bg:#ccc
+    ),
+  mmm:(
+    map-color:#0f0,
+    map-bg:#000
+    ),
+  mmmm:(
+    map-color:#00f,
+    map-bg:#aaa
+    )
+);
+
+@each $key, $value in $map {
+    $text: map-get($value, map-color);
+    $bg: map-get($value, map-bg);
+    header {
+        .section-#{$key}{
+            color: $text;
+            background: $bg;
+            &:hover{
+              background: darken($bg,10%);
+            }
+        }
+    }
+}
 

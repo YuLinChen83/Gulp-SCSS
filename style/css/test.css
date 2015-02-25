@@ -77,4 +77,23 @@ a:hover { color: #050; }
 /* 陣列變數，後面的"..."這三個小點非常重要，一定要加 */
 .p { color: #f00; background-color: #0f0; border-color: #00f; }
 
+/* 使用 list nth 的方式定義 */
+header .section-1 { background-color: #000; border-right: 2px dotted #111; }
+
+header .section-2 { background-color: #00f; border-right: 2px dotted #00a; }
+
+header .section-3 { background-color: #0f0; border-right: 2px dotted #0a0; }
+
+header .section-4 { background-color: #f00; border-right: 2px dotted #a00; }
+
+/* 使用 map 的方式定義 */
+header .section-mm { color: #f00; background: #ccc; }
+header .section-mm:hover { background: #b3b3b3; }
+
+header .section-mmm { color: #0f0; background: #000; }
+header .section-mmm:hover { background: black; }
+
+header .section-mmmm { color: #00f; background: #aaa; }
+header .section-mmmm:hover { background: #909090; }
+
 /*# sourceMappingURL=test.css.map */
