@@ -14,7 +14,7 @@ div.Tom { font-weight: bold; }
 
 .aa { color: #0ff; }
 
-a { color: #0f0; }
+a { color: #0ff; }
 a:hover { color: #050; }
 
 /* for 迴圈的使用 */
@@ -76,3 +76,5 @@ a:hover { color: #050; }
 
 /* 陣列變數，後面的"..."這三個小點非常重要，一定要加 */
 .p { color: #f00; background-color: #0f0; border-color: #00f; }
+
+/*# sourceMappingURL=test.css.map */

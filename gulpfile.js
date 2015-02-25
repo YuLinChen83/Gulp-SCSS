@@ -4,6 +4,8 @@ var gulp = require('gulp'),
 gulp.task('compass',function(){
 	return gulp.src('./style/scss/*.scss')
 		.pipe(compass({
+			sourcemap: true,
+			time: true,
       css: './style/css/',
       sass: './style/scss/',
       style: 'compact' //nested, expanded, compact, compressed
