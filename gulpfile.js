@@ -4,6 +4,7 @@ var gulp = require('gulp'),
 gulp.task('compass',function(){
 	return gulp.src('./style/scss/*.scss')
 		.pipe(compass({
+			config_file: './style/scss/config.rb',
 			sourcemap: true,
 			time: true,
       css: './style/css/',
